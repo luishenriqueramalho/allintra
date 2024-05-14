@@ -1,11 +1,13 @@
-import React from 'react';
-import {Text} from 'react-native';
+import RootStackScreen from "@/navigators";
+import { NavigationContainer } from "@react-navigation/native";
+import React from "react";
+import { Text } from "react-native";
 
 function App() {
   return (
-    <>
-      <Text>Teste</Text>
-    </>
+    <NavigationContainer>
+      <RootStackScreen />
+    </NavigationContainer>
   );
 }
 
