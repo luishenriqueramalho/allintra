@@ -1,12 +1,12 @@
 import React from "react";
 import { Text } from "react-native";
 
-const Setting: React.FC = () => {
+const Notice: React.FC = () => {
   return (
     <>
-      <Text>Setting</Text>
+      <Text>Notice</Text>
     </>
   );
 };
 
-export default Setting;
+export default Notice;
