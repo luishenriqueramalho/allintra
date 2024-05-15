@@ -3,5 +3,6 @@ export const Colors = {
   white: "#FFFFFF",
   selectMenu: "#6131B4",
   backgroundChart: "#221A2C",
+  backgroundGraphic: "#221A2C",
   fall: "#EC3C3C",
 };

@@ -20,6 +20,9 @@ import {
 } from "./styles";
 import { Bitcoin, GraphicArea, GraphicCandle, GraphicLine } from "@/assets/svg";
 import { BinanceSocket } from "@/config/websocketConfig";
+import ChartsLine from "./ChartsLine";
+import ChartsArea from "./ChartsArea";
+import ChartsCandle from "./ChartsCandle";
 
 const Charts: React.FC = () => {
   const [cryptoData, setCryptoData] = useState<any>(null);
@@ -31,7 +34,7 @@ const Charts: React.FC = () => {
 
     binanceSocket.ws.onmessage = (event) => {
       const data = JSON.parse(event.data);
-      console.log("WebSocket message received:", data);
+      //console.log("WebSocket message received:", data);
       setCryptoData(data);
     };
 
@@ -60,7 +63,7 @@ const Charts: React.FC = () => {
   return (
     <>
       <Container>
-        <Todo />
+        <ChartsCandle dataPrice={cryptoData} />
         <GraficTime>
           <GraficType>
             <GraphicLine />

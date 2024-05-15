@@ -22,8 +22,6 @@ interface BottomTabProps {
 const BottomTab: React.FC<BottomTabProps> = ({ changeScreen }) => {
   const [selectedTab, setSelectedTab] = useState<string>("Dashboard");
 
-  console.log(">>>", selectedTab);
-
   return (
     <>
       <Content>
