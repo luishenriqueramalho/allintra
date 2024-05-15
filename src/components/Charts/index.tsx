@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Text, View } from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
 import {
   CodeNameCripto,
   Container,
@@ -26,6 +26,9 @@ import ChartsCandle from "./ChartsCandle";
 
 const Charts: React.FC = () => {
   const [cryptoData, setCryptoData] = useState<any>(null);
+  const [selectedChart, setSelectedChart] = useState<
+    "line" | "candle" | "area"
+  >("line");
 
   useEffect(() => {
     const symbol = "btcusdt";
@@ -60,21 +63,28 @@ const Charts: React.FC = () => {
     });
   };
 
+  const handleChartTypeChange = (chartType: "line" | "candle" | "area") => {
+    setSelectedChart(chartType);
+  };
+
   return (
     <>
       <Container>
-        <ChartsCandle dataPrice={cryptoData} />
+        {selectedChart === "line" && <ChartsLine dataPrice={cryptoData} />}
+        {selectedChart === "candle" && <ChartsCandle dataPrice={cryptoData} />}
+        {selectedChart === "area" && <ChartsArea dataPrice={cryptoData} />}
         <GraficTime>
           <GraficType>
-            <GraphicLine />
-            <GraphicCandle />
-            <GraphicArea />
+            <TouchableOpacity onPress={() => handleChartTypeChange("line")}>
+              <GraphicLine />
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => handleChartTypeChange("candle")}>
+              <GraphicCandle />
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => handleChartTypeChange("area")}>
+              <GraphicArea />
+            </TouchableOpacity>
           </GraficType>
-          <TimeType>
-            <SelectTimer>1D |</SelectTimer>
-            <SelectTimer>5D |</SelectTimer>
-            <SelectTimer>1M</SelectTimer>
-          </TimeType>
         </GraficTime>
         <InfoCripto>
           <CriptoDetail>
@@ -96,9 +106,6 @@ const Charts: React.FC = () => {
                 : "Calculando..."}
             </PriceCriptoConvert>
           </CriptoPrice>
-          <RiseFall>
-            <Percentage>2,12%</Percentage>
-          </RiseFall>
         </InfoCripto>
       </Container>
     </>

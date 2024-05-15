@@ -23,7 +23,7 @@ export const GraficTime = styled.View`
 `;
 
 export const GraficType = styled.View`
-  width: 40%;
+  width: 100%;
   flex-direction: row;
   justify-content: space-between;
 `;
@@ -47,7 +47,7 @@ export const InfoCripto = styled.View`
 `;
 
 export const CriptoDetail = styled.View`
-  width: 45%;
+  width: 50%;
   flex-direction: row;
   align-items: center;
 `;
@@ -68,7 +68,8 @@ export const CodeNameCripto = styled.Text`
 `;
 
 export const CriptoPrice = styled.View`
-  width: 40%;
+  width: 50%;
+  align-items: flex-end;
 `;
 
 export const PriceCripto = styled.Text`
