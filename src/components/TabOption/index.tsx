@@ -5,12 +5,18 @@ interface TabOptionProps {
   title?: string;
   icon?: string;
   onPress: () => void;
+  isSelected?: boolean;
 }
 
-const TabOption: React.FC<TabOptionProps> = ({ title, icon, onPress }) => {
+const TabOption: React.FC<TabOptionProps> = ({
+  title,
+  icon,
+  onPress,
+  isSelected,
+}) => {
   return (
     <SelectOption onPress={onPress}>
-      <ItemSelected>{icon}</ItemSelected>
+      {isSelected ? <ItemSelected>{icon}</ItemSelected> : <>{icon}</>}
     </SelectOption>
   );
 };

@@ -12,7 +12,7 @@ export class BinanceSocket {
 
   private onMessage = (event: MessageEvent) => {
     const data = JSON.parse(event.data);
-    console.log("WebSocket message received:", data);
+    //console.log("WebSocket message received:", data);
   };
 
   private onError = (event: Event) => {
