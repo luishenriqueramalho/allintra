@@ -16,6 +16,10 @@ export const HomeWrapper = styled.View`
   flex: 1;
 `;
 
+export const Scroll = styled.ScrollView.attrs({
+  showsVerticalScrollIndicator: false,
+})``;
+
 export function scale(size: number, minSize?: number): number {
   const newSize = Math.min(
     size,

@@ -1,7 +1,8 @@
+import Charts from "@/components/Charts";
 import NavigationBar from "@/components/NavigationBar";
 import { BinanceSocket } from "@/config/websocketConfig";
+import { Scroll, Wrapper } from "@/utils/global";
 import React, { useEffect } from "react";
-import { Text } from "react-native";
 
 const Dashboard: React.FC = () => {
   useEffect(() => {
@@ -17,7 +18,11 @@ const Dashboard: React.FC = () => {
   return (
     <>
       <NavigationBar />
-      <Text>Dashboard</Text>
+      <Wrapper>
+        <Scroll>
+          <Charts />
+        </Scroll>
+      </Wrapper>
     </>
   );
 };

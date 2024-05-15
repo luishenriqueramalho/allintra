@@ -4,3 +4,7 @@ export { DashboardMenu } from "./DashboardMenu";
 export { NewPaperMenu } from "./NewpaperMenu";
 export { ProfileMenu } from "./ProfileMenu";
 export { SettingsMenu } from "./SettingsMenu";
+export { GraphicLine } from "./GraphicLine";
+export { GraphicCandle } from "./GraphicCandle";
+export { GraphicArea } from "./GraphicArea";
+export { Bitcoin } from "./Bitcoin";
