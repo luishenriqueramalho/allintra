@@ -1,15 +1,16 @@
 import React from "react";
-import { SelectOption, Title } from "./styles";
+import { ItemSelected, SelectOption, Title } from "./styles";
 
 interface TabOptionProps {
   title?: string;
+  icon?: string;
   onPress: () => void;
 }
 
-const TabOption: React.FC<TabOptionProps> = ({ title, onPress }) => {
+const TabOption: React.FC<TabOptionProps> = ({ title, icon, onPress }) => {
   return (
     <SelectOption onPress={onPress}>
-      <Title>{title}</Title>
+      <ItemSelected>{icon}</ItemSelected>
     </SelectOption>
   );
 };

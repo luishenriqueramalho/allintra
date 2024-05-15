@@ -3,14 +3,13 @@ import { scale } from "@/utils/global";
 import styled from "styled-components/native";
 
 export const Content = styled.View`
-  width: 100%;
-  height: ${scale(60)}px;
-  background-color: ${Colors.backgroundMenu};
+  background-color: ${Colors.white};
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  padding: 0 10px;
+  padding: 9px;
   border-radius: ${scale(30)}px;
+  margin-horizontal: ${scale(30)}px;
 `;
 
 export const Title = styled.Text`
