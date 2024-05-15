@@ -1,8 +1,8 @@
 import BottomTab from "@/components/BottomTab";
 import NavigationBar from "@/components/NavigationBar";
-import { HomeWrapper, Wrapper } from "@/utils/global";
+import { HomeWrapper, LinearBg, Wrapper } from "@/utils/global";
 import React, { useState } from "react";
-import { Text } from "react-native";
+import { StyleSheet, Text } from "react-native";
 import Dashboard from "../Dashboard";
 
 const HomeScreen: React.FC = () => {
@@ -10,11 +10,16 @@ const HomeScreen: React.FC = () => {
     <Dashboard />
   );
   return (
-    <>
+    <LinearBg
+      colors={["#3B2A50", "#160F1E"]}
+      style={StyleSheet.absoluteFill}
+      start={{ x: 0, y: 0 }}
+      end={{ x: 1, y: 1 }}
+    >
       <NavigationBar />
       <HomeWrapper>{activeScreen}</HomeWrapper>
       <BottomTab changeScreen={setActiveScreen} />
-    </>
+    </LinearBg>
   );
 };
 

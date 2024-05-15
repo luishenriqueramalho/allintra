@@ -7,12 +7,16 @@ export default function AnimatedSplash() {
   useEffect(() => {
     setTimeout(() => {
       SplashScreen.hide();
-    }, 3000); // Mantenha a splash screen por 3 segundos
+    }, 5000);
   }, []);
 
   return (
     <View style={{ flex: 1 }}>
-      <LottieView source={require("./path/to/animation.json")} autoPlay loop />
+      <LottieView
+        source={require("../../assets/animation/logo.json")}
+        autoPlay
+        loop
+      />
     </View>
   );
 }
