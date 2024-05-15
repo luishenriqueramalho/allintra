@@ -1,10 +1,15 @@
+import NavigationBar from "@/components/NavigationBar";
+import { Wrapper } from "@/utils/global";
 import React from "react";
 import { Text } from "react-native";
 
 const Profile: React.FC = () => {
   return (
     <>
-      <Text>Profile</Text>
+      <NavigationBar title="Perfil" />
+      <Wrapper>
+        <Text>Profile</Text>
+      </Wrapper>
     </>
   );
 };
