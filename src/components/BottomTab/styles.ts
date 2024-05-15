@@ -10,6 +10,7 @@ export const Content = styled.View`
   justify-content: space-around;
   align-items: center;
   padding: 0 10px;
+  border-radius: ${scale(30)}px;
 `;
 
 export const Title = styled.Text`

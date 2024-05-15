@@ -24,8 +24,8 @@ const BottomTab: React.FC<BottomTabProps> = ({ changeScreen }) => {
         />
         <TabOption title="Setting" onPress={() => changeScreen(<Setting />)} />
         <TabOption title="About" onPress={() => changeScreen(<About />)} />
-        <SafeAreaView />
       </Content>
+      <SafeAreaView />
     </>
   );
 };
