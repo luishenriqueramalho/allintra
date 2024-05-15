@@ -1,11 +1,12 @@
 import React from "react";
 import { SafeAreaView, Text, View } from "react-native";
+import { NamePeople } from "./styles";
 
 const NavigationBar: React.FC = () => {
   return (
     <>
       <SafeAreaView />
-      <Text>Navigation</Text>
+      <NamePeople>Olá, Luis</NamePeople>
     </>
   );
 };

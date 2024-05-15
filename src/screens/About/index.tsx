@@ -1,3 +1,4 @@
+import NavigationBar from "@/components/NavigationBar";
 import React from "react";
 import { Text } from "react-native";
 

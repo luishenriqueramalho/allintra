@@ -1,3 +1,4 @@
+import NavigationBar from "@/components/NavigationBar";
 import { BinanceSocket } from "@/config/websocketConfig";
 import React, { useEffect } from "react";
 import { Text } from "react-native";
@@ -15,6 +16,7 @@ const Dashboard: React.FC = () => {
 
   return (
     <>
+      <NavigationBar />
       <Text>Dashboard</Text>
     </>
   );
