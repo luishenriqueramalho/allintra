@@ -20,7 +20,10 @@ const Dashboard: React.FC = () => {
       <NavigationBar />
       <Wrapper>
         <Scroll>
-          <Charts />
+          <Charts symbol="btcusdt" />
+          <Charts symbol="dogeusdt" />
+          <Charts symbol="ethusdt" />
+          <Charts symbol="ltcusdt" />
         </Scroll>
       </Wrapper>
     </>

@@ -24,16 +24,23 @@ import ChartsLine from "./ChartsLine";
 import ChartsArea from "./ChartsArea";
 import ChartsCandle from "./ChartsCandle";
 
-const Charts: React.FC = () => {
+const Cryptos = [
+  { btcusdt: "BTC Bitcoin" },
+  { dogeusdt: "DOGE Dogecoin" },
+  { ethusdt: "ETH Ethereum" },
+  { ltcusdt: "LTC Litecoin" },
+];
+
+const Charts: React.FC = ({ symbol }) => {
   const [cryptoData, setCryptoData] = useState<any>(null);
   const [selectedChart, setSelectedChart] = useState<
     "line" | "candle" | "area"
   >("line");
 
   useEffect(() => {
-    const symbol = "btcusdt";
+    const symbolData = symbol ? symbol : "btcusdt";
     const interval = "1m";
-    const binanceSocket = new BinanceSocket(symbol, interval);
+    const binanceSocket = new BinanceSocket(symbolData, interval);
 
     binanceSocket.ws.onmessage = (event) => {
       const data = JSON.parse(event.data);
@@ -45,6 +52,11 @@ const Charts: React.FC = () => {
       binanceSocket.close();
     };
   }, []);
+
+  const getCryptoName = (symbol) => {
+    const flatCryptos = Object.assign({}, ...Cryptos);
+    return flatCryptos[symbol.toLowerCase()] || "Unknown Symbol";
+  };
 
   const formatPrice = (price) => {
     const numberPrice = parseFloat(price);
@@ -90,7 +102,9 @@ const Charts: React.FC = () => {
           <CriptoDetail>
             <Bitcoin />
             <InfoCriptoDetail>
-              <NameCripto>BTC Bitcoin</NameCripto>
+              <NameCripto>
+                {cryptoData ? getCryptoName(cryptoData.k.s) : "Loading..."}
+              </NameCripto>
               <CodeNameCripto>
                 {cryptoData ? cryptoData.k.s : "Loading..."}
               </CodeNameCripto>

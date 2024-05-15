@@ -16,18 +16,20 @@ const ChartsLine: React.FC = ({ dataPrice }) => {
   const [cryptoLine, setCryptoLine] = useState<any[]>([]);
 
   useEffect(() => {
-    const newDataPoint = {
-      timestamp: new Date(dataPrice.E),
-      price: parseFloat(dataPrice.k.c),
-    };
+    if (dataPrice) {
+      const newDataPoint = {
+        timestamp: new Date(dataPrice.E),
+        price: parseFloat(dataPrice.k.c),
+      };
 
-    setCryptoLine((prevData) => {
-      const newData = [...prevData, newDataPoint];
-      if (newData.length > 30) {
-        return newData.slice(newData.length - 30);
-      }
-      return newData;
-    });
+      setCryptoLine((prevData) => {
+        const newData = [...prevData, newDataPoint];
+        if (newData.length > 30) {
+          return newData.slice(newData.length - 30);
+        }
+        return newData;
+      });
+    }
   }, [dataPrice]);
 
   const data = cryptoLine.map((c) => c.price);
