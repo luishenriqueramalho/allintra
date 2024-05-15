@@ -17,7 +17,7 @@ const Dashboard: React.FC = () => {
 
   return (
     <>
-      <NavigationBar />
+      <NavigationBar title="Olá, Luis" />
       <Wrapper>
         <Scroll>
           <Charts symbol="btcusdt" />
