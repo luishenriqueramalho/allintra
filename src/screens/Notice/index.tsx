@@ -38,7 +38,7 @@ const Notice: React.FC = () => {
             {isNotice.map((place, index) => (
               <Card key={index}>
                 <CardTitle>{place?.titulo}</CardTitle>
-                <CardSubTitle>{place.introducao}</CardSubTitle>
+                <CardSubTitle>{place?.introducao}</CardSubTitle>
               </Card>
             ))}
           </Container>

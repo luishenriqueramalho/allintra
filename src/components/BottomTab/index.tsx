@@ -4,7 +4,6 @@ import { Content } from "./styles";
 import TabOption from "../TabOption";
 import Profile from "@/screens/Profile";
 import Dashboard from "@/screens/Dashboard";
-import Setting from "@/screens/Settings";
 import About from "@/screens/About";
 import Notice from "@/screens/Notice";
 import {
@@ -12,8 +11,9 @@ import {
   DashboardMenu,
   NewPaperMenu,
   ProfileMenu,
-  SettingsMenu,
+  WalletMenu,
 } from "@/assets/svg";
+import Wallet from "@/screens/Wallet";
 
 interface BottomTabProps {
   changeScreen: (screen: React.ReactNode) => void;
@@ -53,13 +53,13 @@ const BottomTab: React.FC<BottomTabProps> = ({ changeScreen }) => {
           isSelected={selectedTab === "Dashboard"}
         />
         <TabOption
-          title="Setting"
-          icon={<SettingsMenu isSelected={selectedTab === "Setting"} />}
+          title="Wallet"
+          icon={<WalletMenu isSelected={selectedTab === "Wallet"} />}
           onPress={() => {
-            changeScreen(<Setting />);
-            setSelectedTab("Setting");
+            changeScreen(<Wallet />);
+            setSelectedTab("Wallet");
           }}
-          isSelected={selectedTab === "Setting"}
+          isSelected={selectedTab === "Wallet"}
         />
         <TabOption
           title="About"

@@ -11,9 +11,9 @@ const HomeScreen: React.FC = () => {
   );
   return (
     <LinearBg
-      colors={["#3B2A50", "#160F1E"]}
+      colors={["#614584", "#160F1E"]}
       style={StyleSheet.absoluteFill}
-      start={{ x: 0, y: 0 }}
+      start={{ x: 4, y: 0 }}
       end={{ x: 1, y: 1 }}
     >
       <HomeWrapper>{activeScreen}</HomeWrapper>

@@ -3,15 +3,15 @@ import { Wrapper } from "@/utils/global";
 import React from "react";
 import { Text } from "react-native";
 
-const Setting: React.FC = () => {
+const Wallet: React.FC = () => {
   return (
     <>
-      <NavigationBar title="Configurações" />
+      <NavigationBar title="Carteiras" />
       <Wrapper>
-        <Text>Setting</Text>
+        <Text>Wallet</Text>
       </Wrapper>
     </>
   );
 };
 
-export default Setting;
+export default Wallet;

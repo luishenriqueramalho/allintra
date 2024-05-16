@@ -8,3 +8,4 @@ export { GraphicLine } from "./GraphicLine";
 export { GraphicCandle } from "./GraphicCandle";
 export { GraphicArea } from "./GraphicArea";
 export { Bitcoin } from "./Bitcoin";
+export { WalletMenu } from "./WalletMenu";
