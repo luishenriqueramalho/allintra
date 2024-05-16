@@ -14,15 +14,15 @@ Clone o repositório e execute o comando abaixo para instalar as dependências e
 
 - **Com npm:**
 
-  ````bash
-  npm bezetacil```
+  ```bash
+  npm bezetacil
 
-  ````
+  ```
 
 - **Usando yarn:**
   `yarn bezetacil`
 
-Este comando limpa o projeto, instala dependências e configura os pods para iOS.
+- Este comando limpa o projeto, instala dependências e configura os pods para iOS.
 
 ## Execução
 
@@ -33,9 +33,12 @@ Este comando limpa o projeto, instala dependências e configura os pods para iOS
 
 - **Android:**
   Execute o seguinte comando na raiz do projeto:
-  `bash
-       Copiar código
-       npx react-native run-android`
+
+  ```bash
+     Copiar código
+     npx react-native run-android
+
+  ```
 
 ## Características do Aplicativo
 
@@ -65,12 +68,12 @@ Utilização do Mobx para gestão de estado, mostrando ser uma biblioteca versá
 
 ## Tecnologias Utilizadas
 
-React Native
-MobX
-TypeScript (usado parcialmente para demonstração)
-APIs da Binance
-Design
-Escolhido um tema com cores escuras para facilitar a visualização prolongada e minimizar o desconforto visual.
+- React Native
+- MobX
+- TypeScript (usado parcialmente para demonstração)
+- APIs da Binance
+- Design
+- Escolhido um tema com cores escuras para facilitar a visualização prolongada e minimizar o desconforto visual.
 
 ## Autor
 
