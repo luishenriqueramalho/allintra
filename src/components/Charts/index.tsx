@@ -23,6 +23,7 @@ import { BinanceSocket } from "@/config/websocketConfig";
 import ChartsLine from "./ChartsLine";
 import ChartsArea from "./ChartsArea";
 import ChartsCandle from "./ChartsCandle";
+import { useStore } from "@/mobx/store";
 
 const Cryptos = [
   { btcusdt: "BTC Bitcoin" },
@@ -32,6 +33,8 @@ const Cryptos = [
 ];
 
 const Charts: React.FC = ({ symbol }) => {
+  const { dolarPriceStore } = useStore();
+  const [isDolar, setIsDolar] = useState();
   const [cryptoData, setCryptoData] = useState<any>(null);
   const [selectedChart, setSelectedChart] = useState<
     "line" | "candle" | "area"
@@ -44,7 +47,6 @@ const Charts: React.FC = ({ symbol }) => {
 
     binanceSocket.ws.onmessage = (event) => {
       const data = JSON.parse(event.data);
-      //console.log("WebSocket message received:", data);
       setCryptoData(data);
     };
 
@@ -67,7 +69,7 @@ const Charts: React.FC = ({ symbol }) => {
   };
 
   const calculateConvertedPrice = (price) => {
-    const conversionRate = 5.12; // Taxa de conversão
+    const conversionRate = isDolar.ask;
     const convertedPrice = parseFloat(price) * conversionRate;
     return convertedPrice.toLocaleString("pt-BR", {
       style: "currency",
@@ -78,6 +80,19 @@ const Charts: React.FC = ({ symbol }) => {
   const handleChartTypeChange = (chartType: "line" | "candle" | "area") => {
     setSelectedChart(chartType);
   };
+
+  const fetchData = async () => {
+    try {
+      const response = await dolarPriceStore.getDolarPrice();
+      setIsDolar(response);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, [dolarPriceStore]);
 
   return (
     <>

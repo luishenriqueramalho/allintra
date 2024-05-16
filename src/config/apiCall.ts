@@ -43,9 +43,15 @@ const CryptosPriceRoute = {
     requests.get(`https://api.binance.com/api/v3/ticker/price`),
 };
 
+const DolarPriceRoute = {
+  getDolarPrice: () =>
+    requests.get(`https://economia.awesomeapi.com.br/last/USD-BRL`),
+};
+
 const apiCall = {
   NoticesRoute,
   CryptosPriceRoute,
+  DolarPriceRoute,
 };
 
 export default apiCall;

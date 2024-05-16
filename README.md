@@ -1,79 +1,81 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Projeto de Aplicativo de Criptomoedas
 
-# Getting Started
+Este projeto é um aplicativo de criptomoedas que oferece funcionalidades de visualização de gráficos, cotações de moedas, notícias sobre o mercado financeiro e gestão de wallet. Inspirado na abordagem da empresa TORO Investimentos, mas com cores e experiência de usuário modificadas para fins demonstrativos.
 
-> **Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## Configuração do Projeto
 
-## Step 1: Start the Metro Server
+### Pré-requisitos
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+- Node.js versão 18.18.0
 
-To start Metro, run the following command from the _root_ of your React Native project:
+### Instalação
 
-```bash
-# using npm
-npm start
+Clone o repositório e execute o comando abaixo para instalar as dependências e configurar o ambiente:
 
-# OR using Yarn
-yarn start
-```
+- **Com npm:**
 
-## Step 2: Start your Application
+  ````bash
+  npm bezetacil```
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+  ````
 
-### For Android
+- **Usando yarn:**
+  `yarn bezetacil`
 
-```bash
-# using npm
-npm run android
+Este comando limpa o projeto, instala dependências e configura os pods para iOS.
 
-# OR using Yarn
-yarn android
-```
+## Execução
 
-### For iOS
+### Para executar o aplicativo:
 
-```bash
-# using npm
-npm run ios
+- **IOS:**
+  Abra o Xcode e inicie o simulador escolhendo o dispositivo desejado.
 
-# OR using Yarn
-yarn ios
-```
+- **Android:**
+  Execute o seguinte comando na raiz do projeto:
+  `bash
+       Copiar código
+       npx react-native run-android`
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+## Características do Aplicativo
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+### Dashboard
 
-## Step 3: Modifying your App
+A Dashboard apresenta informações de criptomoedas limitadas a 20 moedas para evitar sobrecargas, com gráficos de Linha, Área e Candles, que são interativos ao clique.
 
-Now that you have successfully run the app, let's modify it.
+### Notícias
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+Integração com uma API de notícias genérica, mostrando títulos e introduções. A implementação foca na comunicação com a API e é apenas para fins demonstrativos.
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+### Wallet
 
-## Congratulations! :tada:
+Utiliza a API da Binance para listar criptomoedas com seus respectivos nomes e preços. Mostra como filtrar e exibir dados de APIs externas.
 
-You've successfully run and modified your React Native App. :partying_face:
+### Sobre Nós e Perfil
 
-### Now what?
+Estas páginas não foram desenvolvidas, mas as transições estão preparadas para futura implementação.
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+### WebSocket
 
-# Troubleshooting
+Implementação simples e prática para integração na Dashboard, começando a mostrar os dados a partir do primeiro preço disponível.
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+### Gerenciamento de Estado
 
-# Learn More
+Utilização do Mobx para gestão de estado, mostrando ser uma biblioteca versátil para a manipulação de dados em tempo real.
 
-To learn more about React Native, take a look at the following resources:
+## Tecnologias Utilizadas
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+React Native
+MobX
+TypeScript (usado parcialmente para demonstração)
+APIs da Binance
+Design
+Escolhido um tema com cores escuras para facilitar a visualização prolongada e minimizar o desconforto visual.
+
+## Autor
+
+Luis Henrique Ramalho
+
+## Considerações Finais
+
+Com vasta experiência no mercado financeiro e desenvolvimento de robôs para trading automatizado, este projeto representa uma oportunidade de unir conhecimentos técnicos a uma paixão pelo mercado de criptomoedas.
