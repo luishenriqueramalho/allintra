@@ -11,7 +11,7 @@ export const SelectOption = styled.TouchableOpacity.attrs({
 `;
 
 export const Title = styled.Text`
-  color: ${Colors.white};
+  color: ${Colors.backgroundChart};
   text-align: center;
 `;
 
