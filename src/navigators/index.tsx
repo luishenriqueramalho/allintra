@@ -1,3 +1,4 @@
+import AnimatedSplash from "@/components/AnimatedSplash";
 import HomeScreen from "@/screens/HomeScreen";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import React from "react";
@@ -14,6 +15,7 @@ const RootStackScreen = () => {
         gestureEnabled: true,
       }}
     >
+      <Stack.Screen name="AnimatedSplash" component={AnimatedSplash} />
       <Stack.Screen name="HomeScreen" component={HomeScreen} />
     </Stack.Navigator>
   );
