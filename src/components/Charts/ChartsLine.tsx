@@ -36,13 +36,17 @@ const ChartsLine: React.FC = ({ dataPrice }) => {
 
   return (
     <Container>
-      <LineChart
-        style={{ flex: 1 }}
-        data={data}
-        svg={{ stroke: "rgb(134, 65, 244)" }}
-        contentInset={{ top: 20, bottom: 20 }}
-        curve={shape.curveLinear}
-      />
+      {data ? (
+        <LineChart
+          style={{ flex: 1 }}
+          data={data}
+          svg={{ stroke: "rgb(134, 65, 244)" }}
+          contentInset={{ top: 20, bottom: 20 }}
+          curve={shape.curveLinear}
+        />
+      ) : (
+        <Text>Loading...</Text>
+      )}
     </Container>
   );
 };

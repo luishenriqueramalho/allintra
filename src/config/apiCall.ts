@@ -38,8 +38,14 @@ const NoticesRoute = {
     ),
 };
 
+const CryptosPriceRoute = {
+  getPricesCrypto: () =>
+    requests.get(`https://api.binance.com/api/v3/ticker/price`),
+};
+
 const apiCall = {
   NoticesRoute,
+  CryptosPriceRoute,
 };
 
 export default apiCall;
