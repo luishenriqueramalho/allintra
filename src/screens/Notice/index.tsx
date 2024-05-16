@@ -13,10 +13,12 @@ const Notice: React.FC = () => {
     try {
       const response = await noticeStore.getNotices();
       setIsNotice(
-        response.map((notice) => ({
-          ...notice,
-          images: JSON.parse(notice.imagens.replace(/\\/g, "/")),
-        }))
+        response
+          .map((notice) => ({
+            ...notice,
+            images: JSON.parse(notice.imagens.replace(/\\/g, "/")),
+          }))
+          .slice(0, 5)
       );
     } catch (error) {
       console.error(error);
