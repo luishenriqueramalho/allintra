@@ -76,7 +76,7 @@ Utilização do Mobx para gestão de estado, mostrando ser uma biblioteca versá
 
 ## Autor
 
-Luis Henrique Ramalho
+Luis Henrique Ramalho - (84)99919-3340 Whatsapp
 
 ## Considerações Finais
 
