@@ -29,7 +29,7 @@ const HomeScreen: React.FC = () => {
 
   return (
     <LinearBg
-      colors={["#614584", "#160F1E"]}
+      colors={["#080E1C", "#080E1C"]}
       style={StyleSheet.absoluteFill}
       start={{ x: 4, y: 0 }}
       end={{ x: 1, y: 1 }}
