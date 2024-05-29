@@ -9,3 +9,5 @@ export { GraphicCandle } from "./GraphicCandle";
 export { GraphicArea } from "./GraphicArea";
 export { Bitcoin } from "./Bitcoin";
 export { WalletMenu } from "./WalletMenu";
+export { Notification } from "./Notification";
+export { AddPlus } from "./AddPlus";

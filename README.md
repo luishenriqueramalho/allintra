@@ -2,7 +2,7 @@
 
 Este projeto é um aplicativo de criptomoedas que oferece funcionalidades de visualização de gráficos, cotações de moedas, notícias sobre o mercado financeiro e gestão de wallet. Inspirado na abordagem da empresa TORO Investimentos, mas com cores e experiência de usuário modificadas para fins demonstrativos.
 
-![Imagem do Aplicativo](./src/assets/imgs/splash.png) | ![Imagem do Aplicativo](./src/assets/imgs/dashboard.png)
+![Imagem do Aplicativo](./src/assets/imgs/splash.png) ![Imagem do Aplicativo](./src/assets/imgs/dashboard.png)
 
 ## Configuração do Projeto
 

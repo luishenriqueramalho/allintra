@@ -14,13 +14,14 @@ import {
   WalletMenu,
 } from "@/assets/svg";
 import Wallet from "@/screens/Wallet";
+import Home from "@/screens/Home";
 
 interface BottomTabProps {
   changeScreen: (screen: React.ReactNode) => void;
 }
 
 const BottomTab: React.FC<BottomTabProps> = ({ changeScreen }) => {
-  const [selectedTab, setSelectedTab] = useState<string>("Dashboard");
+  const [selectedTab, setSelectedTab] = useState<string>("Home");
 
   return (
     <>
@@ -44,13 +45,13 @@ const BottomTab: React.FC<BottomTabProps> = ({ changeScreen }) => {
           isSelected={selectedTab === "Notice"}
         />
         <TabOption
-          title="Dashboard"
-          icon={<DashboardMenu isSelected={selectedTab === "Dashboard"} />}
+          title="Home"
+          icon={<DashboardMenu isSelected={selectedTab === "Home"} />}
           onPress={() => {
-            changeScreen(<Dashboard />);
-            setSelectedTab("Dashboard");
+            changeScreen(<Home />);
+            setSelectedTab("Home");
           }}
-          isSelected={selectedTab === "Dashboard"}
+          isSelected={selectedTab === "Home"}
         />
         <TabOption
           title="Wallet"

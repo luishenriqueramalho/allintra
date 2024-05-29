@@ -3,12 +3,10 @@ import NavigationBar from "@/components/NavigationBar";
 import { HomeWrapper, LinearBg, Wrapper } from "@/utils/global";
 import React, { useRef, useState } from "react";
 import { Animated, StyleSheet, Text } from "react-native";
-import Dashboard from "../Dashboard";
+import Home from "../Home";
 
 const HomeScreen: React.FC = () => {
-  const [activeScreen, setActiveScreen] = useState<React.ReactNode>(
-    <Dashboard />
-  );
+  const [activeScreen, setActiveScreen] = useState<React.ReactNode>(<Home />);
   const opacity = useRef(new Animated.Value(1)).current;
 
   const changeScreen = (screen: React.ReactNode) => {
