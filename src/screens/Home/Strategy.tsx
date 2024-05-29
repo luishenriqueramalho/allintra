@@ -37,8 +37,6 @@ const CardComponent: React.FC<{ criptoData: any }> = ({ cryptoData }) => {
     ? formatCurrency(cryptoData.k.c)
     : "Loading...";
 
-  console.log(">>>", cryptoData);
-
   return (
     <CardSt>
       <CardHeaderSt>
