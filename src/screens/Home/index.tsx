@@ -1,5 +1,5 @@
 import NavigationBar from "@/components/NavigationBar";
-import React from "react";
+import React, { useState } from "react";
 import { ScrollView, Text } from "react-native";
 import {
   ButtonOption,
@@ -16,16 +16,19 @@ import {
 import { Wrapper } from "@/utils/global";
 import { AddPlus } from "@/assets/svg";
 import Strategy from "./Strategy";
+import Dashboard from "../Dashboard";
 
 const Home: React.FC = () => {
+  const [selectedTab, setSelectedTab] = useState("strategy");
+
   return (
     <>
       <NavigationBar />
       <Header>
-        <StrategyVw>
+        <StrategyVw onPress={() => setSelectedTab("strategy")}>
           <TitleTab>Estratégia</TitleTab>
         </StrategyVw>
-        <FeedVw>
+        <FeedVw onPress={() => setSelectedTab("feed")}>
           <TitleTab>Feeds</TitleTab>
         </FeedVw>
       </Header>
@@ -49,7 +52,7 @@ const Home: React.FC = () => {
             <AddPlus />
           </PlusAdd>
         </RowSelect>
-        <Strategy />
+        {selectedTab === "strategy" ? <Strategy /> : <Dashboard />}
       </Wrapper>
     </>
   );

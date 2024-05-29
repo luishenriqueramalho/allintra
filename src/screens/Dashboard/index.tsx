@@ -1,7 +1,6 @@
 import Charts from "@/components/Charts";
-import NavigationBar from "@/components/NavigationBar";
 import { BinanceSocket } from "@/config/websocketConfig";
-import { Scroll, Wrapper } from "@/utils/global";
+import { Scroll } from "@/utils/global";
 import React, { useEffect } from "react";
 
 const Dashboard: React.FC = () => {
@@ -17,15 +16,12 @@ const Dashboard: React.FC = () => {
 
   return (
     <>
-      <NavigationBar title="Olá, Luis" />
-      <Wrapper>
-        <Scroll>
-          <Charts symbol="btcusdt" />
-          <Charts symbol="dogeusdt" />
-          <Charts symbol="ethusdt" />
-          <Charts symbol="ltcusdt" />
-        </Scroll>
-      </Wrapper>
+      <Scroll>
+        <Charts symbol="btcusdt" />
+        <Charts symbol="dogeusdt" />
+        <Charts symbol="ethusdt" />
+        <Charts symbol="ltcusdt" />
+      </Scroll>
     </>
   );
 };
