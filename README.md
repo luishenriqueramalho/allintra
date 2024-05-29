@@ -1,6 +1,6 @@
 # Projeto Aplicativo de Criptomoedas
 
-Este projeto é um aplicativo de criptomoedas que oferece funcionalidades de visualização de gráficos, cotações de moedas, notícias sobre o mercado financeiro e gestão de wallet. Inspirado na abordagem da empresa TORO Investimentos, mas com cores e experiência de usuário modificadas para fins demonstrativos.
+Este projeto é um aplicativo de criptomoedas que oferece funcionalidades de visualização de gráficos, cotações de moedas, notícias sobre o mercado financeiro e gestão de wallet. Inspirado na abordagem da empresa Allintra, mas com cores e experiência de usuário modificadas para fins demonstrativos.
 
 <img src="./src/assets/imgs/splash.png" alt="Imagem do Aplicativo" width="300" height="600"> <img src="./src/assets/imgs/dashboard.png" alt="Imagem do Aplicativo" width="300" height="600">
 
