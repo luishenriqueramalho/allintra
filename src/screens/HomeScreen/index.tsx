@@ -1,8 +1,7 @@
 import BottomTab from "@/components/BottomTab";
-import NavigationBar from "@/components/NavigationBar";
-import { HomeWrapper, LinearBg, Wrapper } from "@/utils/global";
+import { HomeWrapper, LinearBg } from "@/utils/global";
 import React, { useRef, useState } from "react";
-import { Animated, StyleSheet, Text } from "react-native";
+import { Animated, StyleSheet } from "react-native";
 import Home from "../Home";
 
 const HomeScreen: React.FC = () => {

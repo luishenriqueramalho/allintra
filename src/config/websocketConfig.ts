@@ -20,7 +20,7 @@ export class BinanceSocket {
   };
 
   private onClose = (event: CloseEvent) => {
-    console.log("WebSocket closed:", event);
+    //console.log("WebSocket closed:", event);
   };
 
   public close() {
